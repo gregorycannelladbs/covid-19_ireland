@@ -60,9 +60,9 @@ class TestCA1(unittest.TestCase):
     def test_save_csv(self):
         # create and save matrix
         matrix = [["I", "can", "save", "a", "matrix"], ["I", "can", "save", "a", "matrix"]]
-        ca1.save_csv(matrix, path= "test_output.csv")
+        ca1.save_csv(matrix, path= "test_save_csv.csv")
         # read the saved filed
-        saved_file = [line.strip() for line in open('test_output.csv', 'r')]
+        saved_file = [line.strip() for line in open('test_save_csv.csv', 'r')]
         # concatenate elements of sub_lists in my matrix
         lines_in_matrix = [",".join(sub_list) for sub_list in matrix]
         # check that the element of 
