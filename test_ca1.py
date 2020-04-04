@@ -65,7 +65,7 @@ class TestCA1(unittest.TestCase):
         saved_file = [line.strip() for line in open('test_save_csv.csv', 'r')]
         # concatenate elements of sub_lists in my matrix
         lines_in_matrix = [",".join(sub_list) for sub_list in matrix]
-        # check that the element of 
+        # check that the information saved in the csv matches our matrix
         self.assertEqual(lines_in_matrix, saved_file)
 
 if __name__ == '__main__':
