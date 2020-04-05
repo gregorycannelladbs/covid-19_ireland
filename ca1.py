@@ -4,6 +4,7 @@ Created on Sat Mar 28 21:07:24 2020
 
 @author: Greg
 """
+# github repository URL : https://github.com/gregorycannelladbs/covid-19_ireland
 
 import requests
 import csv
