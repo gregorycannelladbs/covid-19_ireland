@@ -18,7 +18,8 @@ class TestCA1(unittest.TestCase):
         
         # 50 values + 20 values inserted = 70 values
         self.assertEqual(len(lst), 70)
-        # check index of missing values and check that inseted value = 0
+        
+        # check index of missing values and check that inserted value = 0
         for i in indexes:
             self.assertEqual(lst[i], 0)
 
@@ -61,10 +62,13 @@ class TestCA1(unittest.TestCase):
         # create and save matrix
         matrix = [["I", "can", "save", "a", "matrix"], ["I", "can", "save", "a", "matrix"]]
         ca1.save_csv(matrix, path= "test_save_csv.csv")
-        # read the saved filed
+        
+        # read the saved file
         saved_file = [line.strip() for line in open('test_save_csv.csv', 'r')]
+        
         # concatenate elements of sub_lists in my matrix
         lines_in_matrix = [",".join(sub_list) for sub_list in matrix]
+        
         # check that the information saved in the csv matches our matrix
         self.assertEqual(lines_in_matrix, saved_file)
 
